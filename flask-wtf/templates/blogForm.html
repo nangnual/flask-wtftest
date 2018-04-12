@@ -1,0 +1,28 @@
+{% extends "blank.html" %}
+{% block content %}
+<div class="row gap-20 masonry pos-r" style="position:relative; height: 0px;">
+	<div class="masonry-sizer col-md-8"></div>
+	<div class="masonry-item col-md-8" style="position: absolute; left: 0%; top: 0%;">
+		<div class="bgc-white p-20 bd">
+			<div class="mT-30">
+        <form action="/blog/create" method="POST">
+					{{form.csrf_token}}
+					<div class="form-group">
+						{{form.title.label}}
+						{{form.title(size=20, class='form-control')}}
+					</div>
+					<div class="form-group">
+						{{form.slug.label}}
+						{{form.slug(size=20, class='form-control')}}
+					</div>
+					<div class="form-group">
+						{{form.content.label}}
+						{{form.content(class='form-control')}}
+					</div>
+						{{form.submit(class='btn btn-primary')}}
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
