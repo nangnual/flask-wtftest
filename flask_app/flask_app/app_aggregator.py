@@ -5,6 +5,7 @@ from flask_app import blog
 
 def create_app():
 	app = Flask(__name__)
+	app.config.from_object(DevConfig)
 	register_extensions(app)
 	register_blueprint(app)
 	return app;
