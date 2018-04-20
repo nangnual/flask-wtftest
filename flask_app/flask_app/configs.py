@@ -5,7 +5,8 @@ import os
 
 class Config(object):
 	SECRET_KEY = 'mbuhlah'
-	SQL_ALCHEMY_DATABASE_URI = 'mysql+pymysql://{}:{}@localhost:3306/flaskwtftest'.format('root','')
+	SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{}:{}@localhost:3306/flaskwtftest'.format('root','')
+	EXPLAIN_TEMPLATE_LOADING = 1
 
 class DevConfig(Config):
 	DEBUG = True
