@@ -11,3 +11,7 @@ class Config(object):
 class DevConfig(Config):
 	DEBUG = True
 	ENV = 'dev'
+
+class TestConfig(Config):
+	DEBUG = True
+	TESTING = True
